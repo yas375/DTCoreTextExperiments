@@ -14,7 +14,7 @@
 - (void)loadView {
     [super loadView];
     DTAttributedTextView *textView = [[DTAttributedTextView alloc] initWithFrame:self.view.bounds];
-    NSString *html = @"Lorem ipsum dolor sit amet.";
+    NSString *html = @"Lorem ipsum dolor sit amet. <ul><li>aa</li></ul>";
     NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
 	NSAttributedString *string = [[NSAttributedString alloc] initWithHTML:data documentAttributes:NULL];
     textView.attributedString = string;
