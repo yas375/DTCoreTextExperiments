@@ -15,19 +15,13 @@
 @interface DTCoreTextLayoutLine ()
 
 @property (nonatomic, strong) NSArray *glyphRuns;
-@property (nonatomic, assign) dispatch_semaphore_t layoutLock;
 
 @end
-
-#define SYNCHRONIZE_START(obj) dispatch_semaphore_wait(layoutLock, DISPATCH_TIME_FOREVER);
-#define SYNCHRONIZE_END(obj) dispatch_semaphore_signal(layoutLock);
-
 
 @implementation DTCoreTextLayoutLine
 {
 	CGRect _frame;
 	CTLineRef _line;
-	NSAttributedString *_attributedString;
 	
 	CGPoint _baselineOrigin;
 	
@@ -40,22 +34,18 @@
 	NSArray *_glyphRuns;
 
 	BOOL _didCalculateMetrics;
+	dispatch_queue_t _syncQueue;
 }
 
-@synthesize layoutLock;
-
-- (id)initWithLine:(CTLineRef)line layoutFrame:(DTCoreTextLayoutFrame *)layoutFrame origin:(CGPoint)origin;
+- (id)initWithLine:(CTLineRef)line
 {
 	if ((self = [super init]))
 	{
 		_line = line;
 		CFRetain(_line);
-
-		NSAttributedString *globalString = [layoutFrame attributedStringFragment];
-		_attributedString = [[globalString attributedSubstringFromRange:[self stringRange]] copy];
 		
-		_baselineOrigin = origin;
-		layoutLock = dispatch_semaphore_create(1);
+		// get a global queue
+		_syncQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 	}
 	return self;
 }
@@ -63,13 +53,11 @@
 - (void)dealloc
 {
 	CFRelease(_line);
-	
-	dispatch_release(layoutLock);
 }
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"<%@ origin=%@ frame=%@ %@ '%@'>", [self class], NSStringFromCGPoint(_baselineOrigin), NSStringFromCGRect(self.frame), NSStringFromRange([self stringRange]), [_attributedString string]];
+	return [NSString stringWithFormat:@"<%@ origin=%@ frame=%@ range=%@", [self class], NSStringFromCGPoint(_baselineOrigin), NSStringFromCGRect(self.frame), NSStringFromRange([self stringRange])];
 }
 
 - (NSRange)stringRange
@@ -93,9 +81,24 @@
 	return ret;
 }
 
+#pragma mark Creating Variants
+
+- (DTCoreTextLayoutLine *)justifiedLineWithFactor:(CGFloat)justificationFactor justificationWidth:(CGFloat)justificationWidth
+{
+	// make this line justified
+	CTLineRef justifiedLine = CTLineCreateJustifiedLine(_line, justificationFactor, justificationWidth);
+
+	DTCoreTextLayoutLine *newLine = [[DTCoreTextLayoutLine alloc] initWithLine:justifiedLine];
+	
+	CFRelease(justifiedLine);
+	
+	return newLine;
+}
+
 
 #pragma mark Calculations
-- (NSArray *)stringIndices {
+- (NSArray *)stringIndices 
+{
 	NSMutableArray *array = [NSMutableArray array];
 	for (DTCoreTextGlyphRun *oneRun in self.glyphRuns) {
 		[array addObjectsFromArray:[oneRun stringIndices]];
@@ -263,11 +266,9 @@
 	return didShift;
 }
 
-- (void)calculateMetrics
+- (void)_calculateMetrics
 {
-	// calculate metrics
-	SYNCHRONIZE_START(self)
-	{
+	dispatch_sync(_syncQueue, ^{
 		if (!_didCalculateMetrics)
 		{
 			width = (CGFloat)CTLineGetTypographicBounds(_line, &ascent, &descent, &leading);
@@ -275,63 +276,7 @@
 			
 			_didCalculateMetrics = YES;
 		}
-	}
-	SYNCHRONIZE_END(self);
-}
-
-// returns the maximum paragraph spacing for this line
-- (CGFloat)paragraphSpacing:(BOOL)zeroNonLast
-{
-	// a paragraph spacing only is effective for last line in paragraph
-	if (![[_attributedString string] hasSuffix:@"\n"] && zeroNonLast)
-	{
-		return 0;
-	}
-
-	__block CGFloat retSpacing = 0;
-
-	NSRange allRange = NSMakeRange(0, [_attributedString length]);
-	[_attributedString enumerateAttribute:(id)kCTParagraphStyleAttributeName inRange:allRange options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
-					   usingBlock:^(id value, NSRange range, BOOL *stop) {
-						   CTParagraphStyleRef paragraphStyle = (__bridge CTParagraphStyleRef)value;
-						   
-						   float paraSpacing;
-						   
-						   CTParagraphStyleGetValueForSpecifier(paragraphStyle, kCTParagraphStyleSpecifierParagraphSpacing, sizeof(paraSpacing), &paraSpacing);
-						   
-						   retSpacing = MAX(retSpacing, paraSpacing);
-					   }];
-	
-	return retSpacing;
-}
-
-- (CGFloat)paragraphSpacing {
-	return [self paragraphSpacing:YES];
-}
-
-// gets the line height multiplier used in this line
-- (CGFloat)calculatedLineHeightMultiplier
-{
-	if (!_didCalculateMetrics)
-	{
-		[self calculateMetrics];
-	}
-	
-	// take lineHeightMultiple into account
-	NSRange range = NSMakeRange(0, [_attributedString length]);
-	__block float lineMultiplier = 1.;
-	[_attributedString enumerateAttribute:(id)kCTParagraphStyleAttributeName inRange:range options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
-							   usingBlock:^(id value, NSRange range, BOOL *stop) {
-								   CTParagraphStyleRef paragraphStyle = (__bridge CTParagraphStyleRef)value;
-								   								   
-								   CTParagraphStyleGetValueForSpecifier(paragraphStyle, kCTParagraphStyleSpecifierLineHeightMultiple, sizeof(lineMultiplier), &lineMultiplier);
-																
-								   *stop = YES;
-							   }];
-	
-
-	if (lineMultiplier == 0.) lineMultiplier = 1.;
-	return lineMultiplier;
+	});
 }
 
 
@@ -381,31 +326,34 @@
 	return maxLeading;
 }
 
+
 #pragma mark Properties
 - (NSArray *)glyphRuns
 {
-	if (!_glyphRuns)
-	{
-		CFArrayRef runs = CTLineGetGlyphRuns(_line);
-		
-        if (runs) {
-		CGFloat offset = 0;
-		
-		NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:CFArrayGetCount(runs)];
-		
-		for (id oneRun in (__bridge NSArray *)runs)
+	dispatch_sync(_syncQueue, ^{
+		if (!_glyphRuns)
 		{
-			//CGPoint runOrigin = CGPointMake(_baselineOrigin.x + offset, _baselineOrigin.y);
+			// run array is owned by line
+			NSArray *runs = (__bridge NSArray *)CTLineGetGlyphRuns(_line);
 			
-			DTCoreTextGlyphRun *glyphRun = [[DTCoreTextGlyphRun alloc] initWithRun:(__bridge CTRunRef)oneRun layoutLine:self offset:offset];
-			[tmpArray addObject:glyphRun];
-			
-			offset += glyphRun.frame.size.width;
+			if (runs) 
+			{
+				CGFloat offset = 0;
+				
+				NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:[runs count]];
+				
+				for (id oneRun in runs)
+				{
+					DTCoreTextGlyphRun *glyphRun = [[DTCoreTextGlyphRun alloc] initWithRun:(__bridge CTRunRef)oneRun layoutLine:self offset:offset];
+					[tmpArray addObject:glyphRun];
+					
+					offset += glyphRun.frame.size.width;
+				}
+				
+				_glyphRuns = tmpArray;
+			}
 		}
-		
-		_glyphRuns = tmpArray;
-        }
-	}
+	});
 	
 	return _glyphRuns;
 }
@@ -414,7 +362,7 @@
 {
 	if (!_didCalculateMetrics)
 	{
-		[self calculateMetrics];
+		[self _calculateMetrics];
 	}
 	
 	return CGRectMake(_baselineOrigin.x, _baselineOrigin.y - ascent, width, ascent + descent);
@@ -424,7 +372,7 @@
 {
 	if (!_didCalculateMetrics)
 	{
-		[self calculateMetrics];
+		[self _calculateMetrics];
 	}
 	
 	return width;
@@ -434,7 +382,7 @@
 {
 	if (!_didCalculateMetrics)
 	{
-		[self calculateMetrics];
+		[self _calculateMetrics];
 	}
 	
 	return ascent;
@@ -444,7 +392,7 @@
 {
 	if (!_didCalculateMetrics)
 	{
-		[self calculateMetrics];
+		[self _calculateMetrics];
 	}
 	
 	return descent;
@@ -454,7 +402,7 @@
 {
 	if (!_didCalculateMetrics)
 	{
-		[self calculateMetrics];
+		[self _calculateMetrics];
 	}
 	
 	return leading;
@@ -464,7 +412,7 @@
 {
 	if (!_didCalculateMetrics)
 	{
-		[self calculateMetrics];
+		[self _calculateMetrics];
 	}
 	
 	return trailingWhitespaceWidth;

@@ -6,26 +6,15 @@
 //  Copyright (c) 2012 Drobnik.com. All rights reserved.
 //
 
+#import "DTCoreText.h"
 #import "DTHTMLAttributedStringBuilder.h"
-
-#import "DTCoreTextConstants.h"
-#import "DTCSSStylesheet.h"
-#import "DTCoreTextFontDescriptor.h"
-#import "DTCoreTextParagraphStyle.h"
-#import "DTTextAttachment.h"
-
-#import "DTColor+HTML.h"
-#import "DTImage+HTML.h"
-
-#import "NSString+HTML.h"
-#import "NSString+CSS.h"
-#import "NSMutableString+HTML.h"
-
 
 @interface DTHTMLAttributedStringBuilder ()
 
 - (void)_registerTagStartHandlers;
 - (void)_registerTagEndHandlers;
+- (void)_flushCurrentTagContent:(NSString *)tagContent;
+- (void)_flushListPrefix;
 
 @end
 
@@ -76,10 +65,6 @@
 		
 		// documentAttributes ignored for now
 		
-		// register default handlers
-		[self _registerTagStartHandlers];
-		[self _registerTagEndHandlers];
-		
 		//GCD setup
 		_stringAssemblyQueue = dispatch_queue_create("DTHTMLAttributedStringBuilder", 0);
 		_stringAssemblyGroup = dispatch_group_create();
@@ -106,6 +91,10 @@
 		return NO;
 	}
 	
+	// register default handlers
+	[self _registerTagStartHandlers];
+	[self _registerTagEndHandlers];
+	
  	// Specify the appropriate text encoding for the passed data, default is UTF8 
 	NSString *textEncodingName = [_options objectForKey:NSTextEncodingNameDocumentOption];
 	NSStringEncoding encoding = NSUTF8StringEncoding; // default
@@ -126,26 +115,6 @@
 	// use baseURL from options if present
 	baseURL = [_options objectForKey:NSBaseURLDocumentOption];
 	
-	
-	// Make it a string
-	NSString *htmlString;
-	
-	if (encoding == NSUTF8StringEncoding)
-	{
-		// this method can fix malformed UTF8
-		htmlString = [[NSString alloc] initWithPotentiallyMalformedUTF8Data:_data];
-	}
-	else
-	{
-		// use the specified encoding
-		htmlString = [[NSString alloc] initWithData:_data encoding:encoding];
-	}
-	
-	if (!htmlString)
-	{
-		return NO;
-	}
-	
 	// the combined style sheet for entire document
 	_globalStyleSheet = [DTCSSStylesheet defaultStyleSheet]; 
 	
@@ -162,10 +131,6 @@
 	
 	needsListItemStart = NO;
 	needsNewLineBefore = NO;
-	
-	// we cannot skip any characters, NLs turn into spaces and multi-spaces get compressed to singles
-	NSScanner *scanner = [NSScanner scannerWithString:htmlString];
-	scanner.charactersToBeSkipped = nil;
 	
 	// base tag with font defaults
 	defaultFontDescriptor = [[DTCoreTextFontDescriptor alloc] initWithFontAttributes:nil];
@@ -226,13 +191,13 @@
 	
 	if (defaultTextAlignmentNum)
 	{
-		defaultParagraphStyle.textAlignment = (CTTextAlignment)[defaultTextAlignmentNum integerValue];
+		defaultParagraphStyle.alignment = (CTTextAlignment)[defaultTextAlignmentNum integerValue];
 	}
 	
 	NSNumber *defaultFirstLineHeadIndent = [_options objectForKey:DTDefaultFirstLineHeadIndent];
 	if (defaultFirstLineHeadIndent)
 	{
-		defaultParagraphStyle.firstLineIndent = [defaultFirstLineHeadIndent integerValue];
+		defaultParagraphStyle.firstLineHeadIndent = [defaultFirstLineHeadIndent integerValue];
 	}
 	
 	NSNumber *defaultHeadIndent = [_options objectForKey:DTDefaultHeadIndent];
@@ -281,6 +246,10 @@
 	dispatch_group_wait(_stringParsingGroup, DISPATCH_TIME_FOREVER);
 	dispatch_group_wait(_stringAssemblyGroup, DISPATCH_TIME_FOREVER);
 	
+	// clean up handlers because they retained self
+	_tagStartHandlers = nil;
+	_tagEndHandlers = nil;
+	
 	return result;
 }
 
@@ -293,6 +262,11 @@
 
 - (void)_registerTagStartHandlers
 {
+	if (_tagStartHandlers)
+	{
+		return;
+	}
+	
 	_tagStartHandlers = [[NSMutableDictionary alloc] init];
 	
 	void (^imgBlock)(void) = ^ 
@@ -346,11 +320,6 @@
 		[tmpString appendAttributedString:[currentTag attributedString]];	
 		outputHasNewline = NO;
 		currentTagIsEmpty = NO;
-		
-//		if (currentTag.displayStyle == DTHTMLElementDisplayStyleBlock)
-//		{
-//			needsNewLineBefore = YES;
-//		}
 	};
 	
 	[_tagStartHandlers setObject:[imgBlock copy] forKey:@"img"];
@@ -359,7 +328,7 @@
 	void (^blockquoteBlock)(void) = ^ 
 	{
 		currentTag.paragraphStyle.headIndent += 25.0 * textScale;
-		currentTag.paragraphStyle.firstLineIndent = currentTag.paragraphStyle.headIndent;
+		currentTag.paragraphStyle.firstLineHeadIndent = currentTag.paragraphStyle.headIndent;
 		currentTag.paragraphStyle.paragraphSpacing = defaultFontDescriptor.pointSize;
 	};
 	
@@ -457,22 +426,9 @@
 	
 	void (^liBlock)(void) = ^ 
 	{
-		// have inherited the correct list counter from parent
-		DTHTMLElement *counterElement = currentTag.parent;
-		
-		NSString *valueNum = [currentTag attributeForKey:@"value"];
-		if (valueNum)
-		{
-			NSInteger value = [valueNum integerValue];
-			counterElement.listCounter = value;
-			currentTag.listCounter = value;
-		}
-		
-		counterElement.listCounter++;
-		
 		needsListItemStart = YES;
 		currentTag.paragraphStyle.paragraphSpacing = 0;
-		currentTag.paragraphStyle.firstLineIndent = currentTag.paragraphStyle.headIndent;
+		currentTag.paragraphStyle.firstLineHeadIndent = currentTag.paragraphStyle.headIndent;
 		currentTag.paragraphStyle.headIndent += currentTag.paragraphStyle.listIndent;
 		
 		// first tab is to right-align bullet, numbering against
@@ -485,34 +441,85 @@
 	
 	[_tagStartHandlers setObject:[liBlock copy] forKey:@"li"];
 	
-	
-	void (^olBlock)(void) = ^ 
+
+	void (^listBlock)(void) = ^ 
 	{
-		NSString *valueNum = [currentTag attributeForKey:@"start"];
-		if (valueNum)
+#if TARGET_OS_IPHONE		
+		if (needsListItemStart)
 		{
-			NSInteger value = [valueNum integerValue];
-			currentTag.listCounter = value;
+			// we have an opening but not have flushed text since
+			needsNewLineBefore = YES;
+			
+			currentTag.paragraphStyle.paragraphSpacing = 0;
+			
+			if (needsNewLineBefore)
+			{
+				if (!outputHasNewline)
+				{
+					[tmpString appendString:@"\n"];
+					outputHasNewline = YES;
+				}
+				
+				needsNewLineBefore = NO;
+			}
+			
+			// output the prefix
+			[self _flushListPrefix];
 		}
-		else
+#endif		
+		needsNewLineBefore = YES;
+		
+		// create the appropriate list style from CSS
+		NSDictionary *styles = [currentTag styles];
+		DTCSSListStyle *newListStyle = [[DTCSSListStyle alloc] initWithStyles:styles];
+		
+		// append this list style to the current paragraph style text lists
+		NSMutableArray *textLists = [currentTag.paragraphStyle.textLists mutableCopy];
+		if (!textLists)
 		{
-			currentTag.listCounter = 1;
+			textLists = [NSMutableArray array];
 		}
 		
+		[textLists addObject:newListStyle];
+		
+		// workaround for different styles on stacked lists
+		if ([textLists count]>1) // not necessary for first
+		{
+			// find out if each list is ordered or unordered
+			NSMutableArray *tmpArray = [NSMutableArray array];
+			for (DTCSSListStyle *oneList in textLists)
+			{
+				if ([oneList isOrdered])
+				{
+					[tmpArray addObject:@"ol"];
+				}
+				else
+				{
+					[tmpArray addObject:@"ul"];
+				}
+			}
+			
+			// build a CSS selector
+			NSString *selector = [tmpArray componentsJoinedByString:@" "];
+			
+			// find style
+			NSDictionary *style = [[_globalStyleSheet styles] objectForKey:selector];
+			
+			if (style)
+			{
+				[newListStyle updateFromStyleDictionary:style];
+			}
+		}
+		
+		currentTag.paragraphStyle.textLists = textLists;
+		
+		// next text needs a NL before it
 		needsNewLineBefore = YES;
 	};
 	
-	[_tagStartHandlers setObject:[olBlock copy] forKey:@"ol"];
+	[_tagStartHandlers setObject:[listBlock copy] forKey:@"ul"];
+	[_tagStartHandlers setObject:[listBlock copy] forKey:@"ol"];
 	
-	
-	void (^ulBlock)(void) = ^ 
-	{
-		needsNewLineBefore = YES;
-		
-		currentTag.listCounter = 0;
-	};
-	
-	[_tagStartHandlers setObject:[ulBlock copy] forKey:@"ul"];
 	
 	
 	void (^hrBlock)(void) = ^ 
@@ -522,7 +529,7 @@
 		{
 			if ([tmpString length] && !outputHasNewline)
 			{
-				[tmpString appendNakedString:@"\n"];
+				[tmpString appendString:@"\n"];
 				outputHasNewline = YES;
 			}
 			
@@ -537,7 +544,7 @@
 		{
 			[styleDict setObject:currentTag.backgroundColor forKey:@"BackgroundColor"];
 		}
-		[currentTag addAdditionalAttribute:styleDict forKey:@"DTHorizontalRuleStyle"];
+		[currentTag addAdditionalAttribute:styleDict forKey:DTHorizontalRuleStyleAttribute];
 		
 		[tmpString appendAttributedString:[currentTag attributedString]];
 		outputHasNewline = YES;
@@ -549,17 +556,17 @@
 	
 	void (^h1Block)(void) = ^ 
 	{
-			currentTag.headerLevel = 1;
+		currentTag.headerLevel = 1;
 	};
 	[_tagStartHandlers setObject:[h1Block copy] forKey:@"h1"];
-
+	
 	
 	void (^h2Block)(void) = ^ 
 	{
 		currentTag.headerLevel = 2;
 	};
 	[_tagStartHandlers setObject:[h2Block copy] forKey:@"h2"];
-
+	
 	
 	void (^h3Block)(void) = ^ 
 	{
@@ -573,7 +580,7 @@
 		currentTag.headerLevel = 4;
 	};
 	[_tagStartHandlers setObject:[h4Block copy] forKey:@"h4"];
-
+	
 	
 	void (^h5Block)(void) = ^ 
 	{
@@ -587,7 +594,7 @@
 		currentTag.headerLevel = 6;
 	};
 	[_tagStartHandlers setObject:[h6Block copy] forKey:@"h6"];
-
+	
 	
 	void (^fontBlock)(void) = ^ 
 	{
@@ -642,7 +649,7 @@
 	
 	void (^pBlock)(void) = ^ 
 	{
-		currentTag.paragraphStyle.firstLineIndent = currentTag.paragraphStyle.headIndent + defaultParagraphStyle.firstLineIndent;
+		currentTag.paragraphStyle.firstLineHeadIndent = currentTag.paragraphStyle.headIndent + defaultParagraphStyle.firstLineHeadIndent;
 	};
 	
 	[_tagStartHandlers setObject:[pBlock copy] forKey:@"p"];
@@ -663,6 +670,11 @@
 
 - (void)_registerTagEndHandlers
 {
+	if (_tagEndHandlers)
+	{
+		return;
+	}
+
 	_tagEndHandlers = [[NSMutableDictionary alloc] init];
 	
 	void (^bodyBlock)(void) = ^ 
@@ -690,29 +702,46 @@
 	
 	[_tagEndHandlers setObject:[liBlock copy] forKey:@"li"];
 	
-
+	
 	void (^ulBlock)(void) = ^ 
 	{
-		if (currentTag.listDepth < 1)
+		// pop the current list style from the paragraph style text lists
+		NSMutableArray *textLists = [currentTag.paragraphStyle.textLists mutableCopy];
+		[textLists removeLastObject];
+		currentTag.paragraphStyle.textLists = textLists;
+		
+		// if this was the last active list
+		if ([textLists count]==0) 
 		{
 			// adjust spacing after last li to be the one defined for ol/ul
-			NSRange effectiveRange;
+			NSInteger index = [tmpString length];
 			
-			NSMutableDictionary *finalAttributes = [[tmpString attributesAtIndex:[tmpString length]-1 effectiveRange:&effectiveRange] mutableCopy];
-			CTParagraphStyleRef style = (__bridge CTParagraphStyleRef)[finalAttributes objectForKey:(id)kCTParagraphStyleAttributeName];
-			DTCoreTextParagraphStyle *paragraphStyle = [DTCoreTextParagraphStyle paragraphStyleWithCTParagraphStyle:style];
-			
-			if (paragraphStyle.paragraphSpacing != currentTag.paragraphStyle.paragraphSpacing)
+			if (index)
 			{
-				paragraphStyle.paragraphSpacing = currentTag.paragraphStyle.paragraphSpacing;
-			
-				CTParagraphStyleRef newParagraphStyle = [paragraphStyle createCTParagraphStyle];
-				[finalAttributes setObject:CFBridgingRelease(newParagraphStyle) forKey:(id)kCTParagraphStyleAttributeName];
-			
-				[tmpString setAttributes:finalAttributes range:effectiveRange];
+				index--;
+				
+				// get the paragraph style for the previous paragraph
+				NSRange effectiveRange;
+				CTParagraphStyleRef prevParagraphStyle = (__bridge CTParagraphStyleRef)[tmpString attribute:(id)kCTParagraphStyleAttributeName
+																									atIndex:index 
+																							 effectiveRange:&effectiveRange];
+				
+				// convert it to DTCoreText
+				DTCoreTextParagraphStyle *paragraphStyle = [DTCoreTextParagraphStyle paragraphStyleWithCTParagraphStyle:prevParagraphStyle];
+				
+				if (paragraphStyle.paragraphSpacing != currentTag.paragraphStyle.paragraphSpacing)
+				{
+					paragraphStyle.paragraphSpacing = currentTag.paragraphStyle.paragraphSpacing;
+					
+					CTParagraphStyleRef newParagraphStyle = [paragraphStyle createCTParagraphStyle];
+					
+					// because we have multiple paragraph styles per paragraph still, we need to extend towards the begin of the paragraph
+					NSRange paragraphRange = [[tmpString string] rangeOfParagraphAtIndex:effectiveRange.location];
+					
+					[tmpString addAttribute:(id)kCTParagraphStyleAttributeName value:CFBridgingRelease(newParagraphStyle) range:paragraphRange];
+				}
 			}
 		}
-
 	};
 	
 	[_tagEndHandlers setObject:[ulBlock copy] forKey:@"ul"];
@@ -720,12 +749,19 @@
 	
 	void (^pBlock)(void) = ^ 
 	{
-		// we need to output something for <p></p>
 		if (currentTagIsEmpty)
 		{
-			[tmpString appendString:@"\n"];
-			outputHasNewline = NO;  // NO: otherwise a following needed NL is cancelled
+			// empty paragraph
+			
+			// end of P we always add a newline
+			[tmpString appendString:@"\n" withParagraphStyle:currentTag.paragraphStyle fontDescriptor:currentTag.fontDescriptor];
 		}
+		else
+		{
+			// extend previous tag contents
+			[tmpString appendString:@"\n"];
+		}
+		outputHasNewline = YES;
 	};
 	
 	[_tagEndHandlers setObject:[pBlock copy] forKey:@"p"];
@@ -739,10 +775,58 @@
 	{
 		_currentTagContents = [[NSMutableString alloc] initWithCapacity:1000];
 	}
-
+	
 	[_currentTagContents appendString:string];
 }
 
+
+- (void)_flushListPrefix
+{
+	// if we start a list, then we wait until we have actual text
+	if (needsListItemStart)
+	{
+		DTCSSListStyle *effectiveList = [currentTag.paragraphStyle.textLists lastObject];
+		
+		NSInteger index = [tmpString length]-1;
+		NSInteger counter = 0;
+		
+		if (index>0)
+		{
+			// check if there was a list item before this one
+			index--;
+			
+			NSRange prevListRange;
+			NSArray *prevLists = [tmpString attribute:DTTextListsAttribute atIndex:index effectiveRange:&prevListRange];
+			
+			if ([prevLists containsObject:effectiveList])
+			{
+				NSInteger prevItemIndex = [tmpString itemNumberInTextList:effectiveList atIndex:index];
+				counter = prevItemIndex + 1;
+			}
+			else
+			{
+				// new list start
+				counter = [effectiveList startingItemNumber];
+			}
+		}
+		else
+		{
+			// new list start at beginning of string
+			counter = [effectiveList startingItemNumber];
+		}
+		
+		NSDictionary *tagAttributes = [currentTag attributesDictionary];
+		NSAttributedString *prefixString = [NSAttributedString prefixForListItemWithCounter:counter listStyle:effectiveList attributes:tagAttributes];
+		
+		if (prefixString)
+		{
+			[tmpString appendAttributedString:prefixString]; 
+			outputHasNewline = NO;
+		}
+		
+		needsListItemStart = NO;
+	}
+}
 
 - (void)_flushCurrentTagContent:(NSString *)tagContent
 {
@@ -805,15 +889,7 @@
 	// if we start a list, then we wait until we have actual text
 	if (needsListItemStart && [tagContents length] > 0 && ![tagContents isEqualToString:@" "])
 	{
-		NSAttributedString *prefixString = [currentTag prefixForListItem];
-		
-		if (prefixString)
-		{
-			[tmpString appendAttributedString:prefixString]; 
-			outputHasNewline = NO;
-		}
-		
-		needsListItemStart = NO;
+		[self _flushListPrefix];
 	}
 	
 	// we don't want whitespace before first tag to turn into paragraphs
@@ -857,7 +933,7 @@
 		}
 		
 		BOOL removeUnflushedWhitespace = NO;
-
+		
 		// keep currentTag, might be used in flush
 		if (_currentTagContents)
 		{
@@ -866,13 +942,13 @@
 			{
 				if (currentTag.displayStyle != DTHTMLElementDisplayStyleBlock)
 				{
-					[_currentTagContents removeWhitespaceSuffix];
+					[_currentTagContents removeTrailingWhitespace];
 				}
 				
 				removeUnflushedWhitespace = YES;
 			}
 		}
-
+		
 		[self _flushCurrentTagContent:_currentTagContents];
 		
 		// avoid transfering space from parent tag
@@ -880,7 +956,7 @@
 		{
 			_currentTagContents = nil;
 		}
-
+		
 		// keep track of something was flushed for this tag
 		currentTagIsEmpty = YES;
 		
@@ -909,11 +985,11 @@
 			
 			if ([lowerDirection isEqualToString:@"ltr"])
 			{
-				currentTag.paragraphStyle.writingDirection = kCTWritingDirectionLeftToRight;
+				currentTag.paragraphStyle.baseWritingDirection = kCTWritingDirectionLeftToRight;
 			}
 			else if ([lowerDirection isEqualToString:@"rtl"])
 			{
-				currentTag.paragraphStyle.writingDirection = kCTWritingDirectionRightToLeft;
+				currentTag.paragraphStyle.baseWritingDirection = kCTWritingDirectionRightToLeft;
 			}
 		}
 		
@@ -938,7 +1014,7 @@
 			// trim off white space at end if block
 			if (currentTag.displayStyle != DTHTMLElementDisplayStyleInline)
 			{
-				[_currentTagContents removeWhitespaceSuffix];
+				[_currentTagContents removeTrailingWhitespace];
 			}
 			
 			[self _flushCurrentTagContent:_currentTagContents];

@@ -7,12 +7,8 @@
 //
 
 #import "DTTextAttachment.h"
-#import "DTHTMLElement.h"
-#import "CGUtils.h"
-#import "NSAttributedString+HTML.h"
+#import "DTCoreText.h"
 #import "NSData+DTBase64.h"
-#import "DTImage+HTML.h"
-#import "DTCoreTextConstants.h"
 
 @implementation DTTextAttachment
 {
@@ -263,13 +259,18 @@
 }
 
 #pragma mark Properties
-
+/** Mutator for originalSize. Sets displaySize to the same value as originalSize. 
+ @param The CGSize to store in originalSize. */
 - (void)setOriginalSize:(CGSize)originalSize
 {
 	_originalSize = originalSize;
 	self.displaySize = _originalSize;
 }
 
+/** 
+ Accessor for the contents instance variable. If the content type is DTTextAttachmentTypeImage this returns a DTImage instance of the contents.
+ @returns Contents. If it is an image, a DTImage instance is returned. Otherwise it is returned as is. 
+ */
 - (id)contents
 {
 	if (!contents)
@@ -293,5 +294,6 @@
 @synthesize hyperLinkURL = _hyperLinkURL;
 @synthesize attributes = _attributes;
 @synthesize verticalAlignment = _verticalAlignment;
+@synthesize hyperLinkGUID;
 
 @end

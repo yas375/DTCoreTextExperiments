@@ -5,7 +5,9 @@ This project aims to duplicate the methods present on Mac OSX which allow creati
 
 Please support us so that we can continue to make DTCoreText even more awesome!
 
-<a href='http://www.pledgie.com/campaigns/16615'><img alt='Click here to lend your support to: Migrate DTCoreText to libxml2 and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/16615.png?skin_name=chrome' border='0' /></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M5DZ3PAN7NW8J">
+<img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+</a>
 
 The project covers two broad areas:
 
@@ -23,9 +25,14 @@ If you find brief test cases where the created `NSAttributedString` differs from
 Follow [@cocoanetics](http://twitter.com/cocoanetics) on Twitter.
 
 License
-------- 
- 
+-------
+
 It is open source and covered by a standard BSD license. That means you have to mention *Cocoanetics* as the original author of this code. You can purchase a Non-Attribution-License from us.
+
+Documentation
+-------------
+
+Documentation can be [browsed online](http://cocoanetics.github.com/DTCoreText) or installed in your Xcode Organizer via the [Atom Feed URL](http://cocoanetics.github.com/DTCoreText/DTCoreText.atom).
 
 Usage
 -----
@@ -37,17 +44,41 @@ DTCoreText needs a minimum iOS deployment target of 4.3 because of:
 - Blocks
 - ARC
 
-These are your options for adding DTCoreText to your project.
+The best way to use DTCoreText with Xcode 4.2 is to add it in Xcode as a subproject of your project with the following steps.
 
-1. Copy all classes and headers from the Core/Source folder to your project.
-2. Link your project against the libDTCoreText static library. Note that the "Static Library" target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.
-3. Link your project against the universal static library produced from the "Static Framework". 
+1. Download DTCoreText as a subfolder of your project folder
+2. Open the destination project and drag `DTCoreText.xcodeproj` as a subordinate item in the Project Navigator
+3. In your prefix.pch file add:
+	
+		#import "DTCoreText.h"
 
-When linking you need to add the -ObjC and -all_load to your app target's "Other Linker Flags". If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.
+4. In your application target's Build Phases add all of the below to the Link Binary With Libraries phase (you can also do this from the Target's Summary view in the Linked Frameworks and Libraries):
 
-When building from source it is recommended that you at the ALLOW_IPHONE_SPECIAL_CASES define to your PCH, this setting is "baked into" the library and framework targets.
+		The "Static Library" target from the DTCoreText sub-project
+		ImageIO.framework
+		QuartzCore.framework
+		libxml2.dylib
 
-The project has been changed to use libxml2 for parsing HTML, so you need to link in the libxml2.dylib, and, if you're copying all files from Core/Source, you must add the path "/usr/include/libxml2" to your header search paths as well.
+5. Go to File: Project Settings… and change the derived data location to project-relative.
+6. Add the DerivedData folder to your git ignore. 
+7. In your application's target Build Settings:
+	- Set the "User Header Search Paths" to the directory containing your project with recrusive set to YES.
+   - Set the Header Search Paths to /usr/include/libxml2.
+	- Set "Always Search User Paths" to YES.
+	- Set the "Other Linker Flags" below
+
+If you do not want to deal with Git submodules simply add DTCoreText to your project's git ignore file and pull updates to DTCoreText as its own independent Git repository. Otherwise you are free to add DTCoreText as a submodule.
+
+LINKER SETTINGS:
+
+   - add the -ObjC and -all_load to your app target's "Other Linker Flags". This is needed whenever you link in any static library that contains Objective-C classes and categories.
+   - If your app does not use ARC yet (but DTCoreText does) then you also need the -fobjc-arc linker flag.
+
+*Other Options (only mentioned for completeness)*
+
+- Copy all classes and headers from the Core/Source folder to your project. Note for this you need to also generate and include the xxd'ed version of default.css.
+- Link your project against the libDTCoreText static library that you previously compiled. Note that the "Static Library" target does not produce a universal library. You will also need to add all header files contained in the Core/Source folder to your project.
+- Link your project against the universal static library produced from the "Static Framework". 
 
 Known Issues
 ------------
@@ -68,5 +99,7 @@ In the following "Mac" means the initWithHTML: methods there, "DTCoreText" means
 - I suspect that Mac makes use of the -webkit-margin-* CSS styles for spacing the paragraphs, DTCoreText only uses the -webkit-margin-bottom and margin-bottom at present.
 - Mac supports CSS following addresses, e.g. "ul ul" to change the list style for stacked lists. DTCoreText does not support that and so list bullets stay the same for multiple levels.
 - Mac outputs newlines in PRE tags as \n, iOS replaces these with Unicode Line Feed characters so that the paragraph spacing is applied at the end of the PRE tag, not after each line. (iOS wraps code lines when layouting)
+- Mac does not properly encode a double list start. iOS prints the empty list prefix.
+- Mac seems to ignore list-style-position:outside, iOS does the right thing.
 
 If you find an issue then you are welcome to fix it and contribute your fix via a GitHub pull request.

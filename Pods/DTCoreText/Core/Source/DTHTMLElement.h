@@ -6,14 +6,11 @@
 //  Copyright 2011 Drobnik.com. All rights reserved.
 //
 
-#import "DTCoreText.h"
-#import "DTColor+HTML.h"
-
 @class DTCoreTextParagraphStyle;
 @class DTCoreTextFontDescriptor;
 @class DTTextAttachment;
 @class DTCSSListStyle;
-
+@class DTColor;
 
 typedef enum
 {
@@ -59,20 +56,16 @@ typedef enum
 @property (nonatomic, assign) BOOL isColorInherited;
 @property (nonatomic, assign) BOOL preserveNewlines;
 @property (nonatomic, assign) DTHTMLElementFontVariant fontVariant;
-@property (nonatomic, copy) DTCSSListStyle *listStyle;
 @property (nonatomic, assign) CGFloat textScale;
 @property (nonatomic, assign) CGSize size;
-@property (nonatomic, readonly) NSInteger listDepth;
-@property (nonatomic) NSInteger listCounter;
 @property (nonatomic, strong) NSDictionary *attributes;
 
-
 - (NSAttributedString *)attributedString;
-- (NSAttributedString *)prefixForListItem;
 - (NSDictionary *)attributesDictionary;
 
 - (void)parseStyleString:(NSString *)styleString;
 - (void)applyStyleDictionary:(NSDictionary *)styles;
+- (NSDictionary *)styles;
 
 - (void)addAdditionalAttribute:(id)attribute forKey:(id)key;
 
