@@ -10,71 +10,22 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>0294F592AD24482D8D684160</key>
+		<key>01B689D48F824BDF9E1721CD</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>BA1E32C8BED44704A6C296FC</string>
-				<string>FC0A083DDF424EAEA0C394E3</string>
-				<string>2E72B8BCC24C42CFBDD91A67</string>
-				<string>9C3D8D53D070446F95FDBD43</string>
-			</array>
+			<key>fileRef</key>
+			<string>A2EFC92483CD4AB8AB150B37</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
 		</dict>
-		<key>032D6F1DFFDE4527A6D3B880</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTHTMLAttributedStringBuilder.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTHTMLAttributedStringBuilder.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>04C4104C7311492D82D16C37</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSString+CSS.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+CSS.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>07333CE9D337473CB5C96238</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>default.css.c</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/default.css.c</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>08894B8680C145B983AF7A8C</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>594EC651B6AD4CC4B522B4CC</string>
-				<string>730C69DEC4C34F64A602368D</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>0988C3142B2C40418BB7F003</key>
+		<key>04E79555EA954B78AAD1A57F</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1DA02CCAB6FB46A4B24889A6</string>
+			<string>C99822C590E5430BA0873303</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>DSTROOT</key>
@@ -99,497 +50,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>0B6EB87515304C1B8423DCB2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTTextBlock.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTTextBlock.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>0D457DE016CE438A9E51451F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>UIDevice+DTVersion.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/UIDevice+DTVersion.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>0F5D50BD289B4994BA995F8C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSMutableString+HTML.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSMutableString+HTML.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>12B09336ABC84764AA2EF3F0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F8B8BC3B3C9D4280870AF446</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>139BC7CAC8504C6FA221E5C2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>160742EC4BE645898ABC59A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>CGUtils.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/CGUtils.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>18E4E398651E49A7AA7781DC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTImage+HTML.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTImage+HTML.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1AA1C56D8B874224B79A6B7D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTLinkButton.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTLinkButton.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1DA02CCAB6FB46A4B24889A6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>226436D593F943EB9EA347D0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>CGUtils.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/CGUtils.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>22AE28C9011D4520B0E79A0E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextFontCollection.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextFontCollection.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>26287B7AF700462EB471802A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSData+DTBase64.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSData+DTBase64.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2666E0F1D73A4A76AED0F53A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedStringRunDelegates.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedStringRunDelegates.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2736CB30EB38471B93CB2E28</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7653C72D446B4BC39EF7E5E2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>29793D977DA641E2A8F8CA5C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSCharacterSet+HTML.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSCharacterSet+HTML.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2AD8839A40E14848BAEB8B1D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2FA4187C20944CF696207AE1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>2BD43B6013F9454BA158099F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95217584CB10475F9FCAB26A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>2C23A0848DC74AEC8518D68A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextGlyphRun.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextGlyphRun.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2D86511CB6784A26AEE384C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>647649D84EDD4D23A5DA201C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>2D9C192004124767800FEB2E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0F5D50BD289B4994BA995F8C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>2D9FAEF7616A447AB038F009</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTLazyImageView.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTLazyImageView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2E72B8BCC24C42CFBDD91A67</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F052AFA07A3E4F379BFE23E3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2EC4FA1FF650407F87753FD7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTColor+HTML.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTColor+HTML.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2F643326158C414481552A12</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3BB61759C8A64CD8B4F34665</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>2FA4187C20944CF696207AE1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTHTMLParser.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTHTMLParser.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3304F75013C14D76B5B02F30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C5E1B707AA6E479AAD5D75DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>349DC8F1B87C42F882FA34F5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string>$(PRODUCT_NAME)</string>
-			<key>dstSubfolderSpec</key>
-			<string>16</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>367E15D21858483D8305099B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSData+DTBase64.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSData+DTBase64.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>36FCB259656244BEB3A7EF17</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A203698CC3CA4B0991D46ACC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>379E45A2FC00419BAB372224</key>
-		<dict>
-			<key>fileRef</key>
-			<string>64A251D132304026BAC54D0C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>39E1C2DD7EBB4914A2591AE7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSMutableAttributedString+HTML.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSMutableAttributedString+HTML.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3BABD3033F1E4297A64E160E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BCF9464B852943359F2E8CB4</string>
-				<string>5DCD3143737B47D7B925CC78</string>
-				<string>1DA02CCAB6FB46A4B24889A6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3BB61759C8A64CD8B4F34665</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextConstants.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextConstants.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3D3C50B8D0984CE2ACFFF2F8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedString+HTML.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedString+HTML.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3DA5E63AC7E04BB5B885004D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSScanner+HTML.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSScanner+HTML.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3DA6E8A710E14CC38B8D18B7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSString+HTML.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+HTML.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3FA7B99751B942D1B265337D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreText.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreText.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>425887541DAC407D8E159F92</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E916AF48718C4D55B4F5CCCA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>44C8479C2ABC41299FD02CAB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3D3C50B8D0984CE2ACFFF2F8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>44F3A1A1389540E2BE728C36</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0420</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>08894B8680C145B983AF7A8C</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>0294F592AD24482D8D684160</string>
-			<key>productRefGroup</key>
-			<string>2E72B8BCC24C42CFBDD91A67</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>D7ED2EB3CD374E41B19BC38E</string>
-			</array>
-		</dict>
-		<key>46842E6A1A20464C89AB1260</key>
+		<key>082D35506BA94CDB8D840FDD</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -600,21 +61,65 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>46EC112070DD41FABF4070C2</key>
+		<key>090381EC7E3D480F86AB8789</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>NSMutableString+HTML.h</string>
+			<string>NSData+DTBase64.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/NSMutableString+HTML.h</string>
+			<string>DTCoreText/Core/Source/NSData+DTBase64.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>4B291A6C72FA47988B3C1CD5</key>
+		<key>0A562097072E432C85CADD96</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSData+DTBase64.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSData+DTBase64.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0E18E0F6435D4E029E642A2D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextFontDescriptor.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextFontDescriptor.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0E1B70D270C142ECBD531B28</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods-prefix.pch</string>
+			<key>path</key>
+			<string>Pods-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>0ECC972F853948FB85C41885</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSAttributedString+DTCoreText.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSAttributedString+DTCoreText.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>12DD84C4F89049309D7167D7</key>
 		<dict>
 			<key>fileRef</key>
-			<string>67FFC3B7199A4D4B98C1AB70</string>
+			<string>D14EA0E43C874175A95A156B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -623,63 +128,29 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>4C66C7E014654F188082FA97</key>
+		<key>13E934B6249740F39212BB46</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTTextAttachment.m</string>
+			<string>DTCoreTextParagraphStyle.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTTextAttachment.m</string>
+			<string>DTCoreText/Core/Source/DTCoreTextParagraphStyle.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>4F4F2B9533974500ACA4436A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DF5A4C8D741B4B3EAE55814F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>4FF1B3EE90C1458D9062507E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>58C5742A33F94646BBA3DE78</string>
-				<string>0988C3142B2C40418BB7F003</string>
-			</array>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5012946323A148D2AEA0BC50</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5CD8722C6AFB4D528F6E2E37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>50798A63AEF849FEA86E6753</key>
+		<key>13FF44647C56469E8E732C10</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>NSString+Paragraphs.h</string>
+			<string>DTCoreTextFontCollection.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+Paragraphs.h</string>
+			<string>DTCoreText/Core/Source/DTCoreTextFontCollection.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>50E0E440D4894EB1BBA2508E</key>
+		<key>195802847C074E36B2EE1575</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -690,32 +161,329 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>51B14DA5FDB6441685C08E0A</key>
+		<key>1CE276A636E74F6F968A0348</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTCoreTextLayoutFrame.h</string>
+			<string>DTLinkButton.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextLayoutFrame.h</string>
+			<string>DTCoreText/Core/Source/DTLinkButton.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>52F6E88A609E4D6BA95531E1</key>
+		<key>1CF1EE0106304F77886D1F74</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>65E5113B04EB41858EF3CF99</string>
+				<string>0E1B70D270C142ECBD531B28</string>
+				<string>C99822C590E5430BA0873303</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E6B28CBCE924ABFBF91BB52</key>
+		<dict>
+			<key>fileRef</key>
+			<string>52E831BDFE9743E9A9FA385C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>1EC4C7FA3ACE4355A7FDE3B3</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTWebVideoView.h</string>
+			<string>DTTextBlock.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTWebVideoView.h</string>
+			<string>DTCoreText/Core/Source/DTTextBlock.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>58C5742A33F94646BBA3DE78</key>
+		<key>2093AA64429F4019B8E17257</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSAttributedStringRunDelegates.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSAttributedStringRunDelegates.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>23CA713763C8499BB535921C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextParagraphStyle.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextParagraphStyle.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>25A61F6BE2E841F8A4886EFC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4BF68E7599824B368028C37D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>2721F5A749514E1594112F83</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTAttributedTextContentView.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTAttributedTextContentView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2A39565532B543C8B12F0E01</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTHTMLElement.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTHTMLElement.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2C59F42B5E4940E0ADB9F7FF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSString+UTF8Cleaner.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSString+UTF8Cleaner.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>306B6CC628E8458FA3706C57</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSMutableString+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSMutableString+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>30BC72094600467DAE55401D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSAttributedString+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSAttributedString+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3297811953CE4F5683322A54</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSScanner+HTML.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSScanner+HTML.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>32C6E6A722384B0AB8AAEA0A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DE81388EB8D43268882D3C8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>3A5AF73392014E818D80F06B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTImage+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTImage+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3AF9B927DCEE42F8BF7CD2C9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSMutableAttributedString+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSMutableAttributedString+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3B5BD0E4760549C4BB565960</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTLazyImageView.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTLazyImageView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3E3CAF2D0CAB454DB47A545C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreText.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreText.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3E9D6323730341869D7DF423</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSAttributedString+SmallCaps.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSAttributedString+SmallCaps.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4431E96EE8994F5B9681BCD7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4C0431C87ADA4E78B4DCA550</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>465BBE2DA3C64A5581BE66BA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTAttributedTextCell.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTAttributedTextCell.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>46C4FB5B163D4AC292B5E1FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8F415DACDDE24512B12D7E2B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>4A3AD4C37263407F9AA8CC59</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE4B9A5065D44F25BA40F27C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>4B6888C3FC014A78A6DA26BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSString+UTF8Cleaner.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSString+UTF8Cleaner.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4BF68E7599824B368028C37D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextLayouter.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextLayouter.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4C0431C87ADA4E78B4DCA550</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextLayoutFrame.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextLayoutFrame.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4D7DF02B7CF24769823115B4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSScanner+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSScanner+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4E34646E90384DF283E309C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A08C46E4B0544429AB0B68A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>4E7C5E21E9EF487E9AC660ED</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>1DA02CCAB6FB46A4B24889A6</string>
+			<string>C99822C590E5430BA0873303</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>DSTROOT</key>
@@ -740,7 +508,593 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>594EC651B6AD4CC4B522B4CC</key>
+		<key>4E8703BF54D24D259A317C73</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CE2D51E0DDFD46C6B59CC168</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>50F566C4862645049FFE869C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>52E831BDFE9743E9A9FA385C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTHTMLElement.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTHTMLElement.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5548F6A5C1814C2EAA15E2D4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A445B5B420E4302AAC614CA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>56AA896D6A2C4A9195133D1C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>786F4E5F6B734807AFC775B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>56BA49A1C0BF40159AA84BB5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F554F150D44E4419822B8BDE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E2B99EAB7CFA44B985C5DAC3</string>
+				<string>4E8703BF54D24D259A317C73</string>
+				<string>5F97201FB4414FC3897C7223</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>ACA6644B3F774C1797B31B7C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>5B647D0E7D424791B66028DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextLayouter.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextLayouter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5F588A7412B04B66AF1FFC55</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTAttributedTextView.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTAttributedTextView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5F97201FB4414FC3897C7223</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string>$(PRODUCT_NAME)</string>
+			<key>dstSubfolderSpec</key>
+			<string>16</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5FCB893599FA41E08AE49A6C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextLayoutLine.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextLayoutLine.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>634F4F003F0B4AB5ACD6B0D3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D82F978B0AA64D2E95EB653B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>64EDAC3FD292404EA66C82FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DA6C1AA7C55247BEA24872F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>6501EF6A977540F591A4AC78</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5FCB893599FA41E08AE49A6C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>65E5113B04EB41858EF3CF99</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods-resources.sh</string>
+			<key>path</key>
+			<string>Pods-resources.sh</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>6B9F7230CD14457785C49D2C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C102F751B1F44BA4851762F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DE81388EB8D43268882D3C8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTImage+HTML.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTImage+HTML.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>6FD48B5371CC40C8A005C6F1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextGlyphRun.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextGlyphRun.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>70405B765DA34AF48303DF24</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTColor+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTColor+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7049CE1519B442D79FD1D95C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3297811953CE4F5683322A54</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>71292B2DEA4244B1B3AFAAB7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTAttributedTextCell.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTAttributedTextCell.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>741B35D558E543E9A62FB5A4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B2BB6EE54F3E42DAB74B4948</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>786F4E5F6B734807AFC775B0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextFontDescriptor.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextFontDescriptor.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>79C0C17ED13B419F806E6CD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTTextAttachment.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTTextAttachment.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7C6D37FFB63E45BC9C2B5A2C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>UIDevice+DTVersion.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/UIDevice+DTVersion.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7E6F3F6C78F54FA798231FAB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>CGUtils.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/CGUtils.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7ED0F201183C47599CB36D04</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6B9F7230CD14457785C49D2C</string>
+				<string>C3209E74CFEE42B990435BD2</string>
+				<string>C3E2C6A58A374D59BB7C089B</string>
+				<string>88F4959BD6A443518443295E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7F01C1447FB34E95BB6A07A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTHTMLAttributedStringBuilder.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTHTMLAttributedStringBuilder.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>8254BC71713A40DC89FBB2B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextFontCollection.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextFontCollection.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>88F4959BD6A443518443295E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1CF1EE0106304F77886D1F74</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8B735B4B84404567AA9BAA3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F960683676D1414ABD57192E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>8F415DACDDE24512B12D7E2B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTTextAttachment.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTTextAttachment.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>90C1F6C5999649C2B4748571</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>UIDevice+DTVersion.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/UIDevice+DTVersion.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>93048A33F0DF4F30ACA9C787</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7D06B0DF5D642669105E16D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>93841B540A9B4A5F90D6EFDB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ECB7FEE7E7F646FEAACD4D24</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>9869957B9D7647CBB3E0CBA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSString+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSString+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9A445B5B420E4302AAC614CA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>CGUtils.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/CGUtils.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9B180D9D86FD4D74A278B964</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A4EF7774A780497E80145BC8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>9C66B4099413439ABC0F9627</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTLazyImageView.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTLazyImageView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9F2DC8D1F7E944479808085B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTHTMLParser.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTHTMLParser.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A08C46E4B0544429AB0B68A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextConstants.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextConstants.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A2EFC92483CD4AB8AB150B37</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTAttributedTextView.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTAttributedTextView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A4DA2306BE7048E9A0D771CC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSCharacterSet+HTML.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSCharacterSet+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A4EF7774A780497E80145BC8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextGlyphRun.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextGlyphRun.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A7C228BE9C214F118193C550</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTTextBlock.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTTextBlock.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A8DC99A4A7D44408B6244F15</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E60F18D0CDB444ECBD284033</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>AA569F00BD9644619D48A1A1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>23CA713763C8499BB535921C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>ABC8717D15434BCE8C2C7A78</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSString+CSS.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSString+CSS.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>ACA6644B3F774C1797B31B7C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>ADC60CFEAF584B9CB9B04BA7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F9240C6D43264C5F8308DFC2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>AE91238204C44104B5B24F06</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -795,43 +1149,10 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>5CD8722C6AFB4D528F6E2E37</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedStringRunDelegates.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedStringRunDelegates.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>5CE394EDE29A4F439A91898D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSString+HTML.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+HTML.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>5DCD3143737B47D7B925CC78</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods-prefix.pch</string>
-			<key>path</key>
-			<string>Pods-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>60288C75E0B54DC7AC616CB0</key>
+		<key>B152735B9C7647A4B884C447</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AE7219B000B641A584DF955B</string>
+			<string>0ECC972F853948FB85C41885</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -840,121 +1161,178 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>61F5B6F2EADA4D0FB4A4352F</key>
+		<key>B1642ED8A0894019B407D6FF</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>NSString+Paragraphs.m</string>
+			<string>DTCSSStylesheet.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+Paragraphs.m</string>
+			<string>DTCoreText/Core/Source/DTCSSStylesheet.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>647649D84EDD4D23A5DA201C</key>
+		<key>B228B61EDB3B419C9116FB67</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2093AA64429F4019B8E17257</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>B2BB6EE54F3E42DAB74B4948</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTTextBlock.m</string>
+			<string>DTWebVideoView.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTTextBlock.m</string>
+			<string>DTCoreText/Core/Source/DTWebVideoView.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>64A251D132304026BAC54D0C</key>
+		<key>B3496827D0A14CF991E6B5BD</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>UIDevice+DTVersion.m</string>
+			<string>NSAttributedString+SmallCaps.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/UIDevice+DTVersion.m</string>
+			<string>DTCoreText/Core/Source/NSAttributedString+SmallCaps.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>665EAB8FA85C46BEB6F2E25C</key>
+		<key>B67623D6A4744DC2B3DD1931</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSAttributedString+DTCoreText.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSAttributedString+DTCoreText.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BFA5B5E0E6204F62AD265686</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0420</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>E88CABC7DED14459AB5FB69F</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7ED0F201183C47599CB36D04</string>
+			<key>productRefGroup</key>
+			<string>C3E2C6A58A374D59BB7C089B</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>56BA49A1C0BF40159AA84BB5</string>
+			</array>
+		</dict>
+		<key>C102F751B1F44BA4851762F2</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>160742EC4BE645898ABC59A9</string>
-				<string>FECF88296F384FB38EB7E031</string>
-				<string>CEE34179BD98466C974547A8</string>
-				<string>9CD8EF71F45D45F1A1F81771</string>
-				<string>2EC4FA1FF650407F87753FD7</string>
-				<string>3FA7B99751B942D1B265337D</string>
-				<string>A98E289963094B809E341CF1</string>
-				<string>22AE28C9011D4520B0E79A0E</string>
-				<string>AF36F2AC7D2E424C98B86B13</string>
-				<string>2C23A0848DC74AEC8518D68A</string>
-				<string>E4492DB6BE0D453097FD3CDB</string>
-				<string>51B14DA5FDB6441685C08E0A</string>
-				<string>DF87C342D2884B83BF195A7E</string>
-				<string>A07F4AE330674D2FB637FC89</string>
-				<string>50E0E440D4894EB1BBA2508E</string>
-				<string>C8F68B79E3AE4E55BA379CBE</string>
-				<string>46842E6A1A20464C89AB1260</string>
-				<string>8FBC406615464201AAA0AB18</string>
-				<string>6CD28BA6B9104532909E1670</string>
-				<string>ED9FE5C8A1C249A39679D6F8</string>
-				<string>2D9FAEF7616A447AB038F009</string>
-				<string>1AA1C56D8B874224B79A6B7D</string>
-				<string>67838FF5985749D686946E1B</string>
-				<string>0B6EB87515304C1B8423DCB2</string>
-				<string>52F6E88A609E4D6BA95531E1</string>
-				<string>A7D3B26D63B64CE495D69F07</string>
-				<string>F418C8DCB3154C50A3A6CABF</string>
-				<string>F19FE06198844B4FAEAD8917</string>
-				<string>2666E0F1D73A4A76AED0F53A</string>
-				<string>9588267B500A449994AE306B</string>
-				<string>367E15D21858483D8305099B</string>
-				<string>39E1C2DD7EBB4914A2591AE7</string>
-				<string>46EC112070DD41FABF4070C2</string>
-				<string>3DA5E63AC7E04BB5B885004D</string>
-				<string>ED6946060EBB4D3CA6F9097B</string>
-				<string>3DA6E8A710E14CC38B8D18B7</string>
-				<string>50798A63AEF849FEA86E6753</string>
-				<string>E47537CCDD174A418427AD8A</string>
-				<string>0D457DE016CE438A9E51451F</string>
-				<string>226436D593F943EB9EA347D0</string>
-				<string>DD44F1E7DEBF41C9A020D48B</string>
-				<string>95217584CB10475F9FCAB26A</string>
-				<string>FBD871703E88464BBF277732</string>
-				<string>C59D03ADAC2B4933B65D2A2B</string>
-				<string>3BB61759C8A64CD8B4F34665</string>
-				<string>E916AF48718C4D55B4F5CCCA</string>
-				<string>9FE35FA418234844AD50771E</string>
-				<string>7E09E89AD23548ACA6BB1B52</string>
-				<string>9C18372B555E46F79B20FEDA</string>
-				<string>956C8149AE374D6CBFDA6434</string>
-				<string>E0B04334C514417AA2E5657F</string>
-				<string>BDBEE1DBE31C49EEB3F72430</string>
-				<string>C5E1B707AA6E479AAD5D75DB</string>
-				<string>7653C72D446B4BC39EF7E5E2</string>
-				<string>032D6F1DFFDE4527A6D3B880</string>
-				<string>AE7219B000B641A584DF955B</string>
-				<string>2FA4187C20944CF696207AE1</string>
-				<string>18E4E398651E49A7AA7781DC</string>
-				<string>F8B8BC3B3C9D4280870AF446</string>
-				<string>711C414F2F31437E8C7F7C49</string>
-				<string>4C66C7E014654F188082FA97</string>
-				<string>647649D84EDD4D23A5DA201C</string>
-				<string>F800228EB2714871BE81F308</string>
-				<string>67FFC3B7199A4D4B98C1AB70</string>
-				<string>3D3C50B8D0984CE2ACFFF2F8</string>
-				<string>DF5A4C8D741B4B3EAE55814F</string>
-				<string>5CD8722C6AFB4D528F6E2E37</string>
-				<string>29793D977DA641E2A8F8CA5C</string>
-				<string>26287B7AF700462EB471802A</string>
-				<string>D1C4B40FEC2D4EEC8C671D70</string>
-				<string>0F5D50BD289B4994BA995F8C</string>
-				<string>A762FDD554074788BF12DDB3</string>
-				<string>04C4104C7311492D82D16C37</string>
-				<string>5CE394EDE29A4F439A91898D</string>
-				<string>61F5B6F2EADA4D0FB4A4352F</string>
-				<string>69B516D9540E43CFBB75AEFF</string>
-				<string>64A251D132304026BAC54D0C</string>
-				<string>07333CE9D337473CB5C96238</string>
+				<string>7E6F3F6C78F54FA798231FAB</string>
+				<string>71292B2DEA4244B1B3AFAAB7</string>
+				<string>2721F5A749514E1594112F83</string>
+				<string>5F588A7412B04B66AF1FFC55</string>
+				<string>70405B765DA34AF48303DF24</string>
+				<string>3E3CAF2D0CAB454DB47A545C</string>
+				<string>CD6C307126F54FBEA8F86929</string>
+				<string>13FF44647C56469E8E732C10</string>
+				<string>0E18E0F6435D4E029E642A2D</string>
+				<string>6FD48B5371CC40C8A005C6F1</string>
+				<string>5B647D0E7D424791B66028DF</string>
+				<string>E8FD98AB2BA8461E922C5FD5</string>
+				<string>E3C4FB697E2C413B9D2A85FE</string>
+				<string>13E934B6249740F39212BB46</string>
+				<string>195802847C074E36B2EE1575</string>
+				<string>B1642ED8A0894019B407D6FF</string>
+				<string>082D35506BA94CDB8D840FDD</string>
+				<string>2A39565532B543C8B12F0E01</string>
+				<string>9F2DC8D1F7E944479808085B</string>
+				<string>3A5AF73392014E818D80F06B</string>
+				<string>3B5BD0E4760549C4BB565960</string>
+				<string>1CE276A636E74F6F968A0348</string>
+				<string>79C0C17ED13B419F806E6CD5</string>
+				<string>1EC4C7FA3ACE4355A7FDE3B3</string>
+				<string>F3FB57359F034093B45ACD8A</string>
+				<string>B67623D6A4744DC2B3DD1931</string>
+				<string>30BC72094600467DAE55401D</string>
+				<string>B3496827D0A14CF991E6B5BD</string>
+				<string>D034B7D0A879452788E77D48</string>
+				<string>A4DA2306BE7048E9A0D771CC</string>
+				<string>0A562097072E432C85CADD96</string>
+				<string>3AF9B927DCEE42F8BF7CD2C9</string>
+				<string>306B6CC628E8458FA3706C57</string>
+				<string>4D7DF02B7CF24769823115B4</string>
+				<string>ABC8717D15434BCE8C2C7A78</string>
+				<string>9869957B9D7647CBB3E0CBA1</string>
+				<string>E0F1208DDC294B9D81E2C1F7</string>
+				<string>2C59F42B5E4940E0ADB9F7FF</string>
+				<string>7C6D37FFB63E45BC9C2B5A2C</string>
+				<string>9A445B5B420E4302AAC614CA</string>
+				<string>465BBE2DA3C64A5581BE66BA</string>
+				<string>D82F978B0AA64D2E95EB653B</string>
+				<string>A2EFC92483CD4AB8AB150B37</string>
+				<string>E7D06B0DF5D642669105E16D</string>
+				<string>A08C46E4B0544429AB0B68A3</string>
+				<string>8254BC71713A40DC89FBB2B3</string>
+				<string>786F4E5F6B734807AFC775B0</string>
+				<string>A4EF7774A780497E80145BC8</string>
+				<string>4BF68E7599824B368028C37D</string>
+				<string>4C0431C87ADA4E78B4DCA550</string>
+				<string>5FCB893599FA41E08AE49A6C</string>
+				<string>23CA713763C8499BB535921C</string>
+				<string>DD241E899A214037A9D8EFEE</string>
+				<string>DA6C1AA7C55247BEA24872F5</string>
+				<string>7F01C1447FB34E95BB6A07A3</string>
+				<string>52E831BDFE9743E9A9FA385C</string>
+				<string>E60F18D0CDB444ECBD284033</string>
+				<string>6DE81388EB8D43268882D3C8</string>
+				<string>9C66B4099413439ABC0F9627</string>
+				<string>D28D8E475A174816BD07148A</string>
+				<string>8F415DACDDE24512B12D7E2B</string>
+				<string>A7C228BE9C214F118193C550</string>
+				<string>B2BB6EE54F3E42DAB74B4948</string>
+				<string>0ECC972F853948FB85C41885</string>
+				<string>F9240C6D43264C5F8308DFC2</string>
+				<string>3E9D6323730341869D7DF423</string>
+				<string>2093AA64429F4019B8E17257</string>
+				<string>ECB7FEE7E7F646FEAACD4D24</string>
+				<string>090381EC7E3D480F86AB8789</string>
+				<string>EE4B9A5065D44F25BA40F27C</string>
+				<string>F24CD267C4724ABBB5D69DD8</string>
+				<string>3297811953CE4F5683322A54</string>
+				<string>CC7A98F1B8AA4663AF187688</string>
+				<string>F960683676D1414ABD57192E</string>
+				<string>D14EA0E43C874175A95A156B</string>
+				<string>4B6888C3FC014A78A6DA26BB</string>
+				<string>90C1F6C5999649C2B4748571</string>
+				<string>E17AFDE78ECC41A38826DD1E</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -963,21 +1341,36 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>67838FF5985749D686946E1B</key>
+		<key>C3209E74CFEE42B990435BD2</key>
 		<dict>
+			<key>children</key>
+			<array>
+				<string>50F566C4862645049FFE869C</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>DTTextAttachment.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTTextAttachment.h</string>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>67A3EECB62254F079C9C29C5</key>
+		<key>C3E2C6A58A374D59BB7C089B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>ACA6644B3F774C1797B31B7C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C4BDCF27425D4C3EB38D1E9A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BDBEE1DBE31C49EEB3F72430</string>
+			<string>4B6888C3FC014A78A6DA26BB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -986,51 +1379,7 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>67FFC3B7199A4D4B98C1AB70</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedString+DTCoreText.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedString+DTCoreText.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>69B516D9540E43CFBB75AEFF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSString+UTF8Cleaner.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+UTF8Cleaner.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>6CD28BA6B9104532909E1670</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTHTMLParser.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTHTMLParser.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>711C414F2F31437E8C7F7C49</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTLinkButton.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTLinkButton.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>730C69DEC4C34F64A602368D</key>
+		<key>C867C60814FD4FBDAB7A276C</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -1076,10 +1425,23 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>75BCBC69F487426DB5D5087D</key>
+		<key>C99822C590E5430BA0873303</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C9B9E3C189A6445BA9B44E21</key>
 		<dict>
 			<key>fileRef</key>
-			<string>07333CE9D337473CB5C96238</string>
+			<string>3E9D6323730341869D7DF423</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1088,255 +1450,18 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>7653C72D446B4BC39EF7E5E2</key>
+		<key>CC7A98F1B8AA4663AF187688</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTCSSStylesheet.m</string>
+			<string>NSString+CSS.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCSSStylesheet.m</string>
+			<string>DTCoreText/Core/Source/NSString+CSS.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>7A5D9F48CE1A475A86B9B5D8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>226436D593F943EB9EA347D0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>7E09E89AD23548ACA6BB1B52</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextGlyphRun.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextGlyphRun.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>854E9400B7C04BA59CD545B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18E4E398651E49A7AA7781DC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>8FBC406615464201AAA0AB18</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTHTMLElement.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTHTMLElement.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>95217584CB10475F9FCAB26A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTAttributedTextContentView.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTAttributedTextContentView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>956C8149AE374D6CBFDA6434</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextLayoutFrame.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextLayoutFrame.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9588267B500A449994AE306B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSCharacterSet+HTML.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSCharacterSet+HTML.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>97DE83B1C84B4AB0B938C35F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9FE35FA418234844AD50771E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>98C7DF3C5B4E458B985DAAF2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>956C8149AE374D6CBFDA6434</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>9C18372B555E46F79B20FEDA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextLayouter.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextLayouter.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9C3D8D53D070446F95FDBD43</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3BABD3033F1E4297A64E160E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9CD8EF71F45D45F1A1F81771</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTAttributedTextView.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTAttributedTextView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9FE35FA418234844AD50771E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextFontDescriptor.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextFontDescriptor.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A02B48C1FBDA4A6DB66BA15F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FBD871703E88464BBF277732</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>A07F4AE330674D2FB637FC89</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextParagraphStyle.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextParagraphStyle.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A203698CC3CA4B0991D46ACC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>139BC7CAC8504C6FA221E5C2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A2C30A2795EB40EB824EB30E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E0B04334C514417AA2E5657F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>A5DEAE4639BA4765AE1E9262</key>
-		<dict>
-			<key>fileRef</key>
-			<string>69B516D9540E43CFBB75AEFF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>A762FDD554074788BF12DDB3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSScanner+HTML.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSScanner+HTML.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A7631B7DA12C40A29B892023</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D1C4B40FEC2D4EEC8C671D70</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>A7D3B26D63B64CE495D69F07</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedString+DTCoreText.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedString+DTCoreText.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A98E289963094B809E341CF1</key>
+		<key>CD6C307126F54FBEA8F86929</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -1347,32 +1472,28 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>AE7219B000B641A584DF955B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTHTMLElement.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTHTMLElement.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>AF36F2AC7D2E424C98B86B13</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextFontDescriptor.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextFontDescriptor.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B1A4356AB47248FFAF2A1281</key>
+		<key>CE2D51E0DDFD46C6B59CC168</key>
 		<dict>
 			<key>fileRef</key>
-			<string>26287B7AF700462EB471802A</string>
+			<string>50F566C4862645049FFE869C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D034B7D0A879452788E77D48</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSAttributedStringRunDelegates.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSAttributedStringRunDelegates.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D136B77834444255AA464951</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E17AFDE78ECC41A38826DD1E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1381,69 +1502,32 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>B24CD24972E747B3BF8A7BD6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C59D03ADAC2B4933B65D2A2B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>BA1E32C8BED44704A6C296FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>665EAB8FA85C46BEB6F2E25C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BBE6B0F15BBF4C8583395384</key>
-		<dict>
-			<key>fileRef</key>
-			<string>711C414F2F31437E8C7F7C49</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>BCF9464B852943359F2E8CB4</key>
+		<key>D14EA0E43C874175A95A156B</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>Pods-resources.sh</string>
+			<string>NSString+Paragraphs.m</string>
 			<key>path</key>
-			<string>Pods-resources.sh</string>
+			<string>DTCoreText/Core/Source/NSString+Paragraphs.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>BDBEE1DBE31C49EEB3F72430</key>
+		<key>D28D8E475A174816BD07148A</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTCoreTextParagraphStyle.m</string>
+			<string>DTLinkButton.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextParagraphStyle.m</string>
+			<string>DTCoreText/Core/Source/DTLinkButton.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>C346236125874852A5CFE2C6</key>
+		<key>D292CB4CAA6C418D93019B90</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DD44F1E7DEBF41C9A020D48B</string>
+			<string>A7C228BE9C214F118193C550</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1452,10 +1536,10 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>C4D48990882F4910821D3CBA</key>
+		<key>D73C7353A16E4EE4B7557BB5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>04C4104C7311492D82D16C37</string>
+			<string>D28D8E475A174816BD07148A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1464,18 +1548,41 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>C59D03ADAC2B4933B65D2A2B</key>
+		<key>D82F978B0AA64D2E95EB653B</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTColor+HTML.m</string>
+			<string>DTAttributedTextContentView.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTColor+HTML.m</string>
+			<string>DTCoreText/Core/Source/DTAttributedTextContentView.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>C5E1B707AA6E479AAD5D75DB</key>
+		<key>DA6C1AA7C55247BEA24872F5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCSSStylesheet.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCSSStylesheet.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>DB9DA19D1C4B427DAA72FCDF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F01C1447FB34E95BB6A07A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>DD241E899A214037A9D8EFEE</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -1486,32 +1593,10 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>C8F68B79E3AE4E55BA379CBE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCSSStylesheet.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCSSStylesheet.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CEE34179BD98466C974547A8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTAttributedTextContentView.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTAttributedTextContentView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CFA47B6DB62F4DACB9349897</key>
+		<key>DD451B05C25346D0A8F19731</key>
 		<dict>
 			<key>fileRef</key>
-			<string>29793D977DA641E2A8F8CA5C</string>
+			<string>F24CD267C4724ABBB5D69DD8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1520,65 +1605,80 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>D1C4B40FEC2D4EEC8C671D70</key>
+		<key>E0F1208DDC294B9D81E2C1F7</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>NSMutableAttributedString+HTML.m</string>
+			<string>NSString+Paragraphs.h</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/NSMutableAttributedString+HTML.m</string>
+			<string>DTCoreText/Core/Source/NSString+Paragraphs.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>D7ED2EB3CD374E41B19BC38E</key>
+		<key>E17AFDE78ECC41A38826DD1E</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>4FF1B3EE90C1458D9062507E</string>
-			<key>buildPhases</key>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>default.css.c</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/default.css.c</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E2B99EAB7CFA44B985C5DAC3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>F718E18AD0FD47299DA07A5D</string>
-				<string>36FCB259656244BEB3A7EF17</string>
-				<string>349DC8F1B87C42F882FA34F5</string>
+				<string>5548F6A5C1814C2EAA15E2D4</string>
+				<string>E52E966282FA47B9BE147C4B</string>
+				<string>634F4F003F0B4AB5ACD6B0D3</string>
+				<string>01B689D48F824BDF9E1721CD</string>
+				<string>93048A33F0DF4F30ACA9C787</string>
+				<string>4E34646E90384DF283E309C7</string>
+				<string>FE095877B81D4F62A384FA4F</string>
+				<string>56AA896D6A2C4A9195133D1C</string>
+				<string>9B180D9D86FD4D74A278B964</string>
+				<string>25A61F6BE2E841F8A4886EFC</string>
+				<string>4431E96EE8994F5B9681BCD7</string>
+				<string>6501EF6A977540F591A4AC78</string>
+				<string>AA569F00BD9644619D48A1A1</string>
+				<string>FC109527CFE94A7D96800DA6</string>
+				<string>64EDAC3FD292404EA66C82FA</string>
+				<string>DB9DA19D1C4B427DAA72FCDF</string>
+				<string>1E6B28CBCE924ABFBF91BB52</string>
+				<string>A8DC99A4A7D44408B6244F15</string>
+				<string>32C6E6A722384B0AB8AAEA0A</string>
+				<string>E51924526C70401180B364F9</string>
+				<string>D73C7353A16E4EE4B7557BB5</string>
+				<string>46C4FB5B163D4AC292B5E1FA</string>
+				<string>D292CB4CAA6C418D93019B90</string>
+				<string>741B35D558E543E9A62FB5A4</string>
+				<string>B152735B9C7647A4B884C447</string>
+				<string>ADC60CFEAF584B9CB9B04BA7</string>
+				<string>C9B9E3C189A6445BA9B44E21</string>
+				<string>B228B61EDB3B419C9116FB67</string>
+				<string>93841B540A9B4A5F90D6EFDB</string>
+				<string>EE724AFCB97144029A3AAF5F</string>
+				<string>4A3AD4C37263407F9AA8CC59</string>
+				<string>DD451B05C25346D0A8F19731</string>
+				<string>7049CE1519B442D79FD1D95C</string>
+				<string>F11AF9DB2D204C61B8FF04E6</string>
+				<string>8B735B4B84404567AA9BAA3A</string>
+				<string>12DD84C4F89049309D7167D7</string>
+				<string>C4BDCF27425D4C3EB38D1E9A</string>
+				<string>FA703D840CD145B8A21EFC00</string>
+				<string>D136B77834444255AA464951</string>
 			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>F052AFA07A3E4F379BFE23E3</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>DD44F1E7DEBF41C9A020D48B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTAttributedTextCell.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTAttributedTextCell.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>DF5A4C8D741B4B3EAE55814F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedString+SmallCaps.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedString+SmallCaps.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>DF87C342D2884B83BF195A7E</key>
+		<key>E3C4FB697E2C413B9D2A85FE</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -1589,21 +1689,10 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>E0B04334C514417AA2E5657F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextLayoutLine.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextLayoutLine.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E2061578165B49B28FFAED85</key>
+		<key>E51924526C70401180B364F9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F800228EB2714871BE81F308</string>
+			<string>9C66B4099413439ABC0F9627</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1612,43 +1701,10 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>E4492DB6BE0D453097FD3CDB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextLayouter.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextLayouter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E47537CCDD174A418427AD8A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSString+UTF8Cleaner.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+UTF8Cleaner.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>E916AF48718C4D55B4F5CCCA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTCoreTextFontCollection.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTCoreTextFontCollection.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>EC89D7A400534D4D908999BB</key>
+		<key>E52E966282FA47B9BE147C4B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7E09E89AD23548ACA6BB1B52</string>
+			<string>465BBE2DA3C64A5581BE66BA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1657,178 +1713,157 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>EC9E39EC5A114ED4BAE2E8FF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9C18372B555E46F79B20FEDA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>ECB5A76FC43641B5A9A5CEC5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>61F5B6F2EADA4D0FB4A4352F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>ED6946060EBB4D3CA6F9097B</key>
+		<key>E60F18D0CDB444ECBD284033</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>NSString+CSS.h</string>
+			<string>DTHTMLParser.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/NSString+CSS.h</string>
+			<string>DTCoreText/Core/Source/DTHTMLParser.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>ED9FE5C8A1C249A39679D6F8</key>
+		<key>E7D06B0DF5D642669105E16D</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTImage+HTML.h</string>
+			<string>DTColor+HTML.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTImage+HTML.h</string>
+			<string>DTCoreText/Core/Source/DTColor+HTML.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F052AFA07A3E4F379BFE23E3</key>
+		<key>E88CABC7DED14459AB5FB69F</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F19FE06198844B4FAEAD8917</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedString+SmallCaps.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedString+SmallCaps.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F418C8DCB3154C50A3A6CABF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>NSAttributedString+HTML.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/NSAttributedString+HTML.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F6DB0A147DA448858ADAF023</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C66C7E014654F188082FA97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string> -fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>F718E18AD0FD47299DA07A5D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>7A5D9F48CE1A475A86B9B5D8</string>
-				<string>C346236125874852A5CFE2C6</string>
-				<string>2BD43B6013F9454BA158099F</string>
-				<string>A02B48C1FBDA4A6DB66BA15F</string>
-				<string>B24CD24972E747B3BF8A7BD6</string>
-				<string>2F643326158C414481552A12</string>
-				<string>425887541DAC407D8E159F92</string>
-				<string>97DE83B1C84B4AB0B938C35F</string>
-				<string>EC89D7A400534D4D908999BB</string>
-				<string>EC9E39EC5A114ED4BAE2E8FF</string>
-				<string>98C7DF3C5B4E458B985DAAF2</string>
-				<string>A2C30A2795EB40EB824EB30E</string>
-				<string>67A3EECB62254F079C9C29C5</string>
-				<string>3304F75013C14D76B5B02F30</string>
-				<string>2736CB30EB38471B93CB2E28</string>
-				<string>FEA2411DB978415AAA6BBF61</string>
-				<string>60288C75E0B54DC7AC616CB0</string>
-				<string>2AD8839A40E14848BAEB8B1D</string>
-				<string>854E9400B7C04BA59CD545B3</string>
-				<string>12B09336ABC84764AA2EF3F0</string>
-				<string>BBE6B0F15BBF4C8583395384</string>
-				<string>F6DB0A147DA448858ADAF023</string>
-				<string>2D86511CB6784A26AEE384C0</string>
-				<string>E2061578165B49B28FFAED85</string>
-				<string>4B291A6C72FA47988B3C1CD5</string>
-				<string>44C8479C2ABC41299FD02CAB</string>
-				<string>4F4F2B9533974500ACA4436A</string>
-				<string>5012946323A148D2AEA0BC50</string>
-				<string>CFA47B6DB62F4DACB9349897</string>
-				<string>B1A4356AB47248FFAF2A1281</string>
-				<string>A7631B7DA12C40A29B892023</string>
-				<string>2D9C192004124767800FEB2E</string>
-				<string>FEA5BE06DF7D4348BD978BFB</string>
-				<string>C4D48990882F4910821D3CBA</string>
-				<string>F981AF89ECBA4351B069F93D</string>
-				<string>ECB5A76FC43641B5A9A5CEC5</string>
-				<string>A5DEAE4639BA4765AE1E9262</string>
-				<string>379E45A2FC00419BAB372224</string>
-				<string>75BCBC69F487426DB5D5087D</string>
+				<string>AE91238204C44104B5B24F06</string>
+				<string>C867C60814FD4FBDAB7A276C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E8FD98AB2BA8461E922C5FD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTCoreTextLayoutFrame.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTCoreTextLayoutFrame.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>ECB7FEE7E7F646FEAACD4D24</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSCharacterSet+HTML.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSCharacterSet+HTML.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EE4B9A5065D44F25BA40F27C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSMutableAttributedString+HTML.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSMutableAttributedString+HTML.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EE724AFCB97144029A3AAF5F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>090381EC7E3D480F86AB8789</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>F11AF9DB2D204C61B8FF04E6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CC7A98F1B8AA4663AF187688</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string> -fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>F24CD267C4724ABBB5D69DD8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>NSMutableString+HTML.m</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/NSMutableString+HTML.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F3FB57359F034093B45ACD8A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>DTWebVideoView.h</string>
+			<key>path</key>
+			<string>DTCoreText/Core/Source/DTWebVideoView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F554F150D44E4419822B8BDE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4E7C5E21E9EF487E9AC660ED</string>
+				<string>04E79555EA954B78AAD1A57F</string>
 			</array>
 			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>F800228EB2714871BE81F308</key>
+		<key>F9240C6D43264C5F8308DFC2</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTWebVideoView.m</string>
+			<string>NSAttributedString+HTML.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTWebVideoView.m</string>
+			<string>DTCoreText/Core/Source/NSAttributedString+HTML.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F8B8BC3B3C9D4280870AF446</key>
+		<key>F960683676D1414ABD57192E</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>DTLazyImageView.m</string>
+			<string>NSString+HTML.m</string>
 			<key>path</key>
-			<string>DTCoreText/Core/Source/DTLazyImageView.m</string>
+			<string>DTCoreText/Core/Source/NSString+HTML.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F981AF89ECBA4351B069F93D</key>
+		<key>FA703D840CD145B8A21EFC00</key>
 		<dict>
 			<key>fileRef</key>
-			<string>5CE394EDE29A4F439A91898D</string>
+			<string>90C1F6C5999649C2B4748571</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1837,34 +1872,10 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>FBD871703E88464BBF277732</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTAttributedTextView.m</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTAttributedTextView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>FC0A083DDF424EAEA0C394E3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>139BC7CAC8504C6FA221E5C2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEA2411DB978415AAA6BBF61</key>
+		<key>FC109527CFE94A7D96800DA6</key>
 		<dict>
 			<key>fileRef</key>
-			<string>032D6F1DFFDE4527A6D3B880</string>
+			<string>DD241E899A214037A9D8EFEE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1873,10 +1884,10 @@
 				<string> -fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>FEA5BE06DF7D4348BD978BFB</key>
+		<key>FE095877B81D4F62A384FA4F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A762FDD554074788BF12DDB3</string>
+			<string>8254BC71713A40DC89FBB2B3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1884,20 +1895,9 @@
 				<key>COMPILER_FLAGS</key>
 				<string> -fobjc-arc</string>
 			</dict>
-		</dict>
-		<key>FECF88296F384FB38EB7E031</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DTAttributedTextCell.h</string>
-			<key>path</key>
-			<string>DTCoreText/Core/Source/DTAttributedTextCell.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>44F3A1A1389540E2BE728C36</string>
+	<string>BFA5B5E0E6204F62AD265686</string>
 </dict>
 </plist>
