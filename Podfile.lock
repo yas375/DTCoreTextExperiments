@@ -2,4 +2,4 @@ PODS:
   - DTCoreText (1.0.0)
 
 DEPENDENCIES:
-  - DTCoreText (from `git://github.com/Cocoanetics/DTCoreText.git', commit `fe89a60db96cc47b3d6f4fbd84db9eb04bc17529')
+  - DTCoreText (from `git://github.com/Cocoanetics/DTCoreText.git', commit `6dfcd6e47560b0bf0f3ae27a9dbc8eff26e402b3')

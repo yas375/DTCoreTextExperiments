@@ -1,3 +1,3 @@
-platform :ios, :dependency_taret => '4.3'
+platform :ios, :dependency_target => '4.3'
 
-dependency 'DTCoreText', :git => 'git://github.com/Cocoanetics/DTCoreText.git', :commit => 'fe89a60db96cc47b3d6f4fbd84db9eb04bc17529'
+dependency 'DTCoreText', :git => 'git://github.com/Cocoanetics/DTCoreText.git', :commit => '6dfcd6e47560b0bf0f3ae27a9dbc8eff26e402b3'
